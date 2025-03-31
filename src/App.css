@@ -65,3 +65,13 @@
   background-color: rgb(83, 83, 190);
   border: none;
 }
+
+#buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.note-info-button{
+  padding: 1rem;
+}
