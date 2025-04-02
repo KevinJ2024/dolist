@@ -33,7 +33,7 @@
   border-radius: 20px;
 }
 
-#note-title{
+#titleTask{
   width: 15rem;
   height: 2rem;
   background-color: rgb(150, 65, 65);
@@ -46,7 +46,7 @@
   color: white;
 }
 
-#note-text{
+#textTask{
   width: 15rem;
   height: 5rem;
   background-color: rgb(150, 65, 65);
