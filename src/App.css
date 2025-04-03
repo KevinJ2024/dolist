@@ -92,3 +92,11 @@
   align-items: center;
   padding: 2rem;
 }
+
+.btnFilter{
+  width: 8rem;
+  height: 2rem;
+  background-color: white;
+  border: none;
+  margin-top: 1rem;
+}
