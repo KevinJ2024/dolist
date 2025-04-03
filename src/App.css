@@ -22,9 +22,9 @@
 
 #note-info{
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   background-color: gray;
-  width: 30rem;
+  width: 50rem;
   gap: 2rem;
   display: flex;
   justify-content: center;
@@ -74,4 +74,21 @@
 
 .note-info-button{
   padding: 1rem;
+}
+
+#note-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 50rem;
+  height: 20rem;
+  overflow-y: auto;
+  background-color: gray;
+  border-radius: 20px;
+  border: solid 1px white;
+  align-items: center;
+  padding: 2rem;
 }

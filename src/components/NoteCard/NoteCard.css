@@ -1,0 +1,27 @@
+.note-card {
+    width: 20rem; 
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+  
+.note-card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    white-space: normal; 
+    overflow-wrap: break-word;
+    padding: 2rem;
+}
+
+#text{
+    width: 15rem;
+    color: white;
+}
+  
+#check{
+    width: 2rem;
+    height: 2rem;
+}
