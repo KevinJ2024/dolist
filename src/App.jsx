@@ -1,12 +1,11 @@
 import { useContext, useState } from 'react'
-import { NoteContext } from './context/Context'
+import { NoteContext } from './context/context'
 import { NoteCard } from './components/NoteCard/NoteCard'
 import './App.css'
 
 function App() {
-  const { filteredNotes, addNote, filterAll, filterPending, filterCompleted } = useContext(NoteContext)
-  const [title, setTitle] = useState("")
-  const [text, setText] = useState("")
+  const { filteredNotes, addNote, filterAll, filterPending, filterCompleted, title, text, setTitle, setText } = useContext(NoteContext)
+  
 
   const handleAddNote = () => {
     addNote(title, text)

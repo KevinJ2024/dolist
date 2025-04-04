@@ -4,7 +4,10 @@ export const NoteContext = createContext()
 
 export const NoteProvider = ({ children }) => {
   const [notes, setNotes] = useState([])
+  const [title, setTitle] = useState("")
+  const [text, setText] = useState("")
   const [filter, setFilter] = useState("all")
+  
 
   const addNote = (title, text) => {
     const newNote = {
@@ -30,6 +33,22 @@ export const NoteProvider = ({ children }) => {
             updatedNote.bgColor = "rgb(150, 65, 65)"
             updatedNote.isCompleted = false
           }
+
+          return updatedNote
+        }
+        return note
+      })
+    )
+  }
+
+  const editNote = (id, newTitle, newText) => {
+    setNotes((prevNotes) =>
+      prevNotes.map((note) => {
+        if (note.id === id) {
+
+          const updatedNote = { ...note }
+            updatedNote.title = newTitle;
+            updatedNote.text = newText;
 
           return updatedNote
         }
@@ -69,7 +88,9 @@ export const NoteProvider = ({ children }) => {
   }
 
   return (
-    <NoteContext.Provider value={{ notes, addNote, changeBgColor, filteredNotes, filterAll, filterPending, filterCompleted }}>
+    <NoteContext.Provider value={{ notes, addNote, changeBgColor, filteredNotes, filterAll,
+    filterPending, filterCompleted, 
+    title, text, setTitle, setText, editNote }}>
       {children}
     </NoteContext.Provider>
   )

@@ -8,6 +8,7 @@
     background-color: #8B3A3A;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    gap: 2rem;
 }
 
 .note-card-content {
@@ -20,7 +21,7 @@
     width: 100%;
 }
 
-.note-text {
+#text-note {
     width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -30,7 +31,16 @@
 .check-container {
     display: flex;
     justify-content: flex-end;
+    justify-content: space-around;
     width: 100%;
+}
+
+#edit-note{
+    border-radius: 5px;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(83, 83, 190);
+    border: none;
 }
 
 input[type="checkbox"] {
