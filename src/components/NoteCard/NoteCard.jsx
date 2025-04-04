@@ -6,13 +6,8 @@ export const NoteCard = ({ id, title, text, bgColor, isCompleted }) => {
   let content;
   const { changeBgColor, editNote } = useContext(NoteContext)
   const [isEditing, setIsEditing] = useState(false)
-  const [currentTitle, setCurrentTitle] = useState(title)
-  const [currentText, setCurrentText] = useState(text)
-
-  useEffect(() => {
-    setCurrentTitle(title)
-    setCurrentText(text)
-  }, [title, text])
+  const [newTitle, setNewTitle] = useState(title)
+  const [newText, setNewText] = useState(text)
 
   const handleChangeBgColor = (e) => {
     const checked = e.target.checked
@@ -22,23 +17,23 @@ export const NoteCard = ({ id, title, text, bgColor, isCompleted }) => {
   const handleEdit = () => {
     setIsEditing(!isEditing)
     if (isEditing) {
-      editNote(id, currentTitle, currentText)
+      editNote(id, newTitle, newText)
     }
   }
 
   if (isEditing) {
     content = (
       <div>
-        <input type="text" value={currentTitle} onChange={(e) => setCurrentTitle(e.target.value)} />
-        <textarea value={currentText} onChange={(e) => setCurrentText(e.target.value)} />
+        <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
+        <textarea value={newText} onChange={(e) => setNewText(e.target.value)} />
       </div>
     )
   } else {
     content = (
       <div>
-        <h1>{currentTitle}</h1>
+        <h1>{newTitle}</h1>
         <div className="note-card-content">
-          <h3 id="text-note">{currentText}</h3>
+          <h3 id="text-note">{newText}</h3>
         </div>
       </div>
     )
