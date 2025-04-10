@@ -14,7 +14,7 @@ export const NoteProvider = ({ children }) => {
       id: crypto.randomUUID(),
       title,
       text,
-      bgColor: "rgb(150, 65, 65)",
+      bgColor: "rgb(110, 33, 33)",
       isCompleted: false
     }
     setNotes([...notes, newNote])
@@ -30,7 +30,7 @@ export const NoteProvider = ({ children }) => {
             updatedNote.bgColor = "rgb(65, 150, 65)"
             updatedNote.isCompleted = true
           } else {
-            updatedNote.bgColor = "rgb(150, 65, 65)"
+            updatedNote.bgColor = "rgb(110, 33, 33)"
             updatedNote.isCompleted = false
           }
 

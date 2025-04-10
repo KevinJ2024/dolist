@@ -36,7 +36,7 @@
 #titleTask{
   width: 15rem;
   height: 2rem;
-  background-color: rgb(150, 65, 65);
+  background-color: rgb(110, 33, 33);
   color: white;
   border: none;
   padding: 0.5rem;
@@ -49,7 +49,7 @@
 #textTask{
   width: 15rem;
   height: 5rem;
-  background-color: rgb(150, 65, 65);
+  background-color: rgb(110, 33, 33);
   border: none;
   padding: 0.5rem;
   color: white;
